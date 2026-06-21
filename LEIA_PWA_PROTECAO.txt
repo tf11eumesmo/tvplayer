@@ -1,0 +1,30 @@
+﻿TV Player versao 66 - PWA protegido/final
+
+Como gerar:
+1. Extraia o ZIP completo.
+2. Entre na pasta raiz do projeto, onde fica pubspec.yaml.
+3. Execute gerar_pwa_protegido.bat.
+4. Publique a pasta build_pwa_protegido na hospedagem.
+
+Mudanca importante desta versao:
+- A trava de dispositivo existe somente no PWA protegido/final.
+- Permitidos nesta versao temporaria: iPhone/iPad/iOS, Smart TVs sem Android e Windows para teste.
+- Bloqueados no PWA protegido/final: Linux/macOS desktop, Android e Android TV.
+- ATENCAO: Windows foi liberado temporariamente apenas para testar canais/filmes no PWA protegido; depois deve ser bloqueado novamente.
+- O PWA normal/teste continua livre para rodar em PC/Android e facilitar testes.
+
+Protecoes aplicadas somente no PWA protegido/final:
+- Bloqueio de F12 e atalhos comuns de inspecao.
+- Bloqueio de menu direito em qualquer lugar, inclusive campos de texto.
+- Bloqueio de selecao fora de campos.
+- Console neutralizado para nao expor logs/URLs.
+- Bloqueio de iframe externo.
+- Tela bloqueada mostra somente: 404 page not found.
+- Remocao de sourcemaps.
+- Headers de seguranca para hospedagens que suportam _headers ou .htaccess.
+
+Observacoes:
+- Roku pode depender do modelo/ambiente, porque muitos dispositivos Roku nao oferecem navegador/PWA comum como Samsung/LG.
+- A deteccao usa user-agent/navigator. Isso dificulta uso comum, mas nao impede usuario tecnico de falsificar user-agent.
+- PWA nao impede captura avancada de links por proxy, extensao, VPN, roteador, DNS ou programa externo.
+- Para protecao forte real, seria necessario servidor/proxy/token temporario, mas isso NAO foi alterado nesta versao.
